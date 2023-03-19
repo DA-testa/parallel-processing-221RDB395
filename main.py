@@ -9,6 +9,7 @@ def prepared_works(m, data): # Tiek sagatavots saraksts ar darbiem,
         list_of_jobs.append(work) # Izdarītais darbs tiek pievienots sarakstam.
     return list_of_jobs # Kad visi darbi tika paveikti, funkcija return atgriež sarakstu, ar sagatavotiem darbiem.
 
+
 def prepared_threads(n): # n - pavedienu skaits.
     list_of_threads = [] # Jauns, tukšs saraksts ar pavedieniem.
     for i in range(n): # Apstrādā elementu i masīvā, kas atrodas starp 0 un n-1.
@@ -16,11 +17,13 @@ def prepared_threads(n): # n - pavedienu skaits.
         list_of_threads.append(thread) # Izveidotais pavediens tiek pievienots sarakstam.
     return list_of_threads # Tiek atgriezts saraksts ar izveidotajiem pavedieniem.
 
+
 def parallel_processing(n, m, data):
     list_of_jobs = prepared_works(m, data) # Darbu saraksts, kam tika padota informācija par datu masīvu un darbu skaitu.
     list_of_threads = prepared_threads(n) # Pavedienu saraksts, kam tika padota informācija par pavedienu skaitu.
     output = [] # Izveido tukšu rezultātu sarakstu.
 
+    
 # Notiek darbu apstrāde.
     for work in list_of_jobs: # Iziet caur visiem darbiem sarakstā.
         # Meklē brīvo pavedienu starp visiem.
@@ -41,6 +44,7 @@ def parallel_processing(n, m, data):
 
     return output # Atgriež sarakstu ar visiem veiktajiem darbiem un to laikiem.
 
+
 def main():
     # Tiek ievadīts pavedienu skaits(n) un darbus skaits(m).
     n, m = map(int, input().split())
@@ -54,5 +58,6 @@ def main():
     for thread, outset in result:
         print(thread, outset)
 
+        
 if __name__ == "__main__":
     main()
