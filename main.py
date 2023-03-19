@@ -1,5 +1,5 @@
-# Anastasija Bondare 221RDB395
 # python3
+# 221RDB395 Anastasija Bondare 13.grupa
 
 def prepared_works(m, data): # Tiek sagatavots saraksts ar darbiem, 
 # m - darbu skaits, data - saraksts, ar darbu izpildes laikiem, cik nepieciešams, lai apstrādātu katru sarakstu.
